@@ -1,10 +1,10 @@
 # bot_game
 **Sapos y Murciélagos**
 
-##Descripción
+**Descripción**
 Este proyecto de la materia "Ética y Deontología" contiene BOTs que jugarán el juego "Sapos y Murciélagos" visto en clase.
 
-###Clases Principales
+**Clases Principales**
 **Arbitro**
 La clase Arbitro es responsable de calcular los puntajes de las jugadas realizadas por los bots. Contiene el método estático calcular_puntaje_jugada que toma las jugadas de ambos bots y devuelve los puntajes correspondientes.
 
@@ -17,5 +17,5 @@ La clase BotRandom es una implementación de un bot que juega de forma aleatoria
 **Clase BotBueno**
 La clase BotBueno es una implementación de un bot que juega siempre "Sapo".
 
-####main.py
+**main.py**
 En este archivo, se encuentra la ejecución principal del programa
