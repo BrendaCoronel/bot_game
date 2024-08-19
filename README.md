@@ -5,6 +5,7 @@
 Este proyecto de la materia "Ética y Deontología" contiene BOTs que jugarán el juego "Sapos y Murciélagos" visto en clase.
 
 **Clases Principales**
+
 **Arbitro**
 La clase Arbitro es responsable de calcular los puntajes de las jugadas realizadas por los bots. Contiene el método estático calcular_puntaje_jugada que toma las jugadas de ambos bots y devuelve los puntajes correspondientes.
 
