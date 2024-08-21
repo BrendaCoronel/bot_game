@@ -1,6 +1,6 @@
 from bot_abstract import BotAbstract
 
-class BotGanador(BotAbstract):
+class BotMessi(BotAbstract):
     
     @property
     def Nombre(self) -> str:
