@@ -2,6 +2,8 @@ from arbitro import Arbitro
 from bot_bueno import BotBueno
 from bot_random import BotRandom
 from bot_messi import BotMessi  # Importa el nuevo bot
+from bot_abstract import BotAbstract
+
 import winsound
 import time
 
@@ -9,7 +11,7 @@ bot_messi = BotMessi()
 bot_bueno = BotBueno()
 bot_random = BotRandom()
 
-def Jugar(bot1: Botabstract, bot2: Botabstract):
+def Jugar(bot1: BotAbstract, bot2: BotAbstract):
     puntaje_bot1 = 0
     puntaje_bot2 = 0
     jugada_previa_bot1 = None
