@@ -1,13 +1,13 @@
 from arbitro import Arbitro
 from bot_bueno import BotBueno
 from bot_random import BotRandom
-from bot_abstract import BotAbstract
+from bot_ganador import BotGanador  # Importa el nuevo bot
 import winsound
 import time
 
+bot_ganador = BotGanador()
 bot_bueno = BotBueno()
 bot_random = BotRandom()
-bot_random2 = BotRandom()
 
 def Jugar(bot1: BotAbstract, bot2: BotAbstract):
     puntaje_bot1 = 0
@@ -19,14 +19,13 @@ def Jugar(bot1: BotAbstract, bot2: BotAbstract):
     print("Jugada #", bot1.Nombre, bot2.Nombre, "Ptos. ", "Ptos. ", sep='\t|\t')
     print("-" * 80)
 
-    for i in range(20):
+    for i in range(10):  # Juego de 10 rondas
         jugada_bot1 = bot1.Jugar(i, jugada_previa_bot2) 
         jugada_bot2 = bot2.Jugar(i, jugada_previa_bot1) 
 
         jugada_previa_bot1 = jugada_bot1
         jugada_previa_bot2 = jugada_bot2
 
-        
         puntos_bot1, puntos_bot2 = Arbitro.calcular_puntaje_jugada(jugada_bot1, jugada_bot2)
 
         puntaje_bot1 += puntos_bot1
@@ -48,6 +47,8 @@ def Jugar(bot1: BotAbstract, bot2: BotAbstract):
 
     return puntaje_bot1, puntaje_bot2
 
+# Ejecutar el juego entre BotGanador y BotBueno
+puntaje_bot_ganador, puntaje_bot_bueno = Jugar(bot_ganador, bot_bueno)
 
-
-puntaje_bot_bueno, puntaje_bot_random = Jugar(bot_bueno, bot_random)
+# Ejecutar el juego entre BotGanador y BotRandom
+puntaje_bot_ganador, puntaje_bot_random = Jugar(bot_ganador, bot_random)
