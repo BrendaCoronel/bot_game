@@ -1,15 +1,15 @@
 from arbitro import Arbitro
 from bot_bueno import BotBueno
 from bot_random import BotRandom
-from bot_ganador import BotGanador  # Importa el nuevo bot
+from bot_messi import BotMessi  # Importa el nuevo bot
 import winsound
 import time
 
-bot_ganador = BotGanador()
+bot_messi = BotMessi()
 bot_bueno = BotBueno()
 bot_random = BotRandom()
 
-def Jugar(bot1: BotAbstract, bot2: BotAbstract):
+def Jugar(bot1: Botabstract, bot2: Botabstract):
     puntaje_bot1 = 0
     puntaje_bot2 = 0
     jugada_previa_bot1 = None
@@ -47,8 +47,8 @@ def Jugar(bot1: BotAbstract, bot2: BotAbstract):
 
     return puntaje_bot1, puntaje_bot2
 
-# Ejecutar el juego entre BotGanador y BotBueno
-puntaje_bot_ganador, puntaje_bot_bueno = Jugar(bot_ganador, bot_bueno)
+# Ejecutar el juego entre BotMessi y BotBueno
+puntaje_bot_messi, puntaje_bot_bueno = Jugar(bot_messi, bot_bueno)
 
-# Ejecutar el juego entre BotGanador y BotRandom
-puntaje_bot_ganador, puntaje_bot_random = Jugar(bot_ganador, bot_random)
+# Ejecutar el juego entre BotMessi y BotRandom
+puntaje_bot_messi, puntaje_bot_random = Jugar(bot_messi, bot_random)
