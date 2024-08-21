@@ -4,18 +4,13 @@ class BotMessi(BotAbstract):
     
     @property
     def Nombre(self) -> str:
-        return "Ganador"
-    
-    def __init__(self):
-        self.ultima_jugada_oponente = None
+        return "Messi"
     
     def Jugar(self, jugada_numero: int, jugada_previa_oponente: str) -> str:
         if jugada_numero == 0:
-            # Primera jugada siempre es Murciélago
-            return 'M'
-        
-        # Estrategia basada en la jugada previa del oponente
-        if jugada_previa_oponente == 'M':
-            return 'S'  # Responder a Murciélago con Sapo
-        elif jugada_previa_oponente == 'S':
-            return 'M'  # Responder a Sapo con Murciélago
+            return 'M'  # Primera jugada siempre Murciélago
+        else:
+            if jugada_previa_oponente == 'M':
+                return 'M'  # Si el oponente jugó Murciélago, respondemos con Murciélago
+            else:
+                return 'M'  # Si el oponente jugó Sapo, también jugamos Murciélago
